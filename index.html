@@ -4,17 +4,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영상 보기</title>
+  <title>2025 여름수련회</title>
   <style>
-    body { font-family: sans-serif; text-align: center; margin: 20px; }
-    video { width: 100%; max-width: 480px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 20px;
+    }
+    
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 600px;
+      width: 100%;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      font-weight: 300;
+    }
+    
+    video {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+    
+    video:hover {
+      transform: scale(1.02);
+    }
+    
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 2rem;
+      }
+      
+      .container {
+        padding: 30px 20px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h2>업로드된 영상</h2>
-  <video controls>
-    <source src="videoplayback.mp4" type="video/mp4">
-    해당 브라우저는 video 태그를 지원하지 않습니다.
-  </video>
+  <div class="container">
+    <h2>2025 여름수련회 미션영상</h2>
+    <video controls>
+      <source src="videoplayback.mp4" type="video/mp4">
+      해당 브라우저는 video 태그를 지원하지 않습니다.
+    </video>
+  </div>
 </body>
 </html>
